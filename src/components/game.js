@@ -45,7 +45,6 @@ export default function Game(){
     const [disableHit, setDisableHit] = useState(true)
     const [disableStand, setDisableStand] = useState(true)
     const [disableDeal, setDisableDeal] = useState(true)
-    const [gameStarted, setGameStarted] = useState(false)
     const [showTotal, setShowTotal] = useState(false)
     const [gameOver, setGameOver] = useState(false)
 
@@ -163,7 +162,6 @@ export default function Game(){
         alert("Insuffiicient Funds")
         return
     }
-        setGameStarted(true)
         setGameOver(false)
         setBetPlaced(true)
         setPlayerCards([])
@@ -177,7 +175,6 @@ export default function Game(){
     // BEGIN ROUND -------------------------------//
 
     function dealCards(){
-        setGameStarted(true)
         setPlayerCards([randomCard(), randomCard()])
         setCompCards([randomCard()])
         setPlayerBust(false)
@@ -232,6 +229,7 @@ function useUpdatedBalanceEffect(moneyUpdate, balance, betSize) {
       };
   
       updateBalanceInMongoDB();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [moneyUpdate]); 
     return [];
   }
@@ -241,6 +239,7 @@ function useUpdatedBalanceEffect(moneyUpdate, balance, betSize) {
   
     useEffect(() => {
         bust(playerCards)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [playerCards])
 
 
