@@ -1,13 +1,299 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.board {
+  background-color: green;
+  background-image: url(https://focused-gates-53a6f0.netlify.app/images/blackJackTable.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+@media screen and (max-width: 1300px) {
+  .board {
+    background-position: center;
+  }
+}
+
+.footer {
+  background-color: rgba(255, 228, 196, 0.7);
+  font-size: 2rem;
+  text-transform: capitalize;
+  text-align: center;
+  padding: 15px;
+  border-radius: 10px 10px 0px 0px;
+  height: 10%;
+}
+
+.logout {
+  font-size: 1.5rem;
+  border-radius: 30px;
+  border: 1px solid black;
+  padding: 0px 10px;
+  position: absolute;
+  top: 3%;
+  left: 1%;
+  transition: 250ms;
+  box-shadow: 0px 1px 2px;
+  background-color: green;
+}
+
+.logout-btn {
+  color: black;
+  text-decoration: none;
+}
+
+.logout:hover {
+  transition: 250ms;
+  background-color: rgba(255, 255, 255, 0.499);
+}
+
+/* GAME ----------------------------*/
+
+.game {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.dealer{
+  margin-top: 115px;
+}
+
+.cards {
+  border: 1px solid black;
+  width: 75px;
+  height: 125px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.694);
+  box-shadow: 0px 2px 0px;
+}
+
+.dealer-cards {
+  display: flex;
+  gap: 10px;
+  font-size: 2.5rem;
+}
+
+.player-cards {
+  display: flex;
+  gap: 10px;
+  font-size: 2.5rem;
+}
+
+.total {
+  font-size: 1.25rem;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.bust {
+  margin-top: 10px;
+  transform: scale(1.75);
+  text-align: center;
+  font-weight: 700;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.playbtns button {
+  border: 1px solid black;
+  margin-left: 10px;
+  font-size: 1.5rem;
+  padding: 5px 10px;
+  border-radius: 25px;
+  background-color: green;
+  transition: 250ms;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.456);
+}
+
+.playbtns button:hover {
+  transition: 250ms;
+  background-color: rgba(255, 255, 255, 0.499);
+}
+
+.result {
+  font-weight: 500;
+  transform: scale(2.5);
+}
+  
+.bettingbtns button {
+  border: 1px solid black;
+  font-size: 1.1rem;
+  padding: 5px 10px;
+  background-color: green;
+  margin-left: 5px;
+  border-radius: 30px;
+  margin-top: 20px;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.456);
+  font-size: 1.25rem;
+}
+
+.bettingbtns input {
+  border: none;
+  border-radius: 30px;
+  padding: 5px 10px;
+  font-size: 1.25rem;
+  width: 60px;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.456);
+  text-align: center;
+  outline: none;
+}
+
+.bettingbtns input::-webkit-inner-spin-button,
+.bettingbtns input::-webkit-outer-spin-button {
+  appearance: none;
+}
+
+.bettingbtns button:hover{
+  transition: 250ms;
+  background-color: rgba(255, 255, 255, 0.499);
+}
+
+
+/* REGISTER ----------------------------*/
+
+.register {
+  background-image: url("/src/images/blackjack.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.form{
+  position: relative;
+  top: 22%;
+  margin-left: 20px;
+}
+
+.form h3 {
+  color: white;
+  margin-top: -50px;
+  margin-bottom: 50px;
+  font-size: 2.5rem;
+  width: 30%;
+  text-align: center;
+  font-weight: 300;
+  letter-spacing: 3px;
+}
+
+Form {
+  width: 30%;
+  color: black;
+}
+
+.register-title {
+  padding: 20px 0px 0px 20px;
+  color: white;
+  letter-spacing: 3px;
+}
+
+.register-title h1{
+  font-weight: 200;
+  font-size: 3rem;
+}
+
+
+.signin-link {
+  color: white;
+  letter-spacing: 1px;
+}
+
+.form-check{
+  color: white;
+}
+
+@media screen and (min-width: 900px) {
+  .form{
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .signin-form {
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  Form {
+    width: 70%;
+  }
+  .form h3 {
+    width: 70%;
+  }
+  .signin-form h3{
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 534px) {
+ .form {
+  position: relative;
+  top: 20%;
+ } 
+}
+
+@media screen and (max-width: 375px) {
+  .register {
+    height: 100%;
+  }
+  .form h3{
+    margin-top: 0px;
+    font-size: 2rem;
+  }
+}
+
+
+/* SIGN IN ----------------------------*/
+
+.signin {
+  background-image: url("/src/images/blackjack.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.signin-form {
+  margin-left: 20px;
+  position: relative;
+  top: 40%;
+}
+
+.signin-form h3 {
+  color: white;
+  margin-top: -50px;
+  margin-bottom: 50px;
+  font-size: 2.5rem;
+  width: 30%;
+  text-align: center;
+  font-weight: 300;
+  letter-spacing: 3px;
+}
+
+.signin-title {
+  padding: 20px 0px 0px 20px;
+  color: white;
+  letter-spacing: 3px;
+}
+
+.signin-title h1 {
+  font-size: 3rem;
+  font-weight: 200;
 }
