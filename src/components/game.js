@@ -10,7 +10,7 @@ export default function Game(){
     const [balance, setBalance] = useState()
         
     useEffect(() => {
-        fetch("http://localhost:5000/userInfo", {
+        fetch("https://tyler-blackjack.vercel.app/userInfo", {
           method: "POST",
           crossDomain: true,
           headers: {
@@ -207,7 +207,7 @@ function useUpdatedBalanceEffect(moneyUpdate, balance, betSize) {
   
             setBalance(updatedBalance);
   
-            const response = await fetch("http://localhost:5000/userInfo", {
+            const response = await fetch("https://tyler-blackjack.vercel.app/userInfo", {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
