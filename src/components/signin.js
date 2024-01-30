@@ -17,7 +17,7 @@ export default function Signin() {
         e.preventDefault();
     
         console.log(email, password);
-        fetch("https://localhost:5000/signin", {
+        fetch("http://localhost:5000/signin", {
           method: "POST",
           crossDomain: true,
           headers: {
