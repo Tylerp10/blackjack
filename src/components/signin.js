@@ -17,7 +17,7 @@ export default function Signin() {
         e.preventDefault();
     
         console.log(email, password);
-        fetch("https://tyler-blackjack.vercel.app/signin", {
+        fetch("https://localhost:5000/signin", {
           method: "POST",
           crossDomain: true,
           headers: {

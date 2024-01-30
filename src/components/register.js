@@ -17,7 +17,7 @@ export default function Register() {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        axios.post('https://tyler-blackjack.vercel.app/', {email, name, password, balance})
+        axios.post('https://localhost:5000/', {email, name, password, balance})
         .then(result => {console.log(result)
             navigate('/signin')
         })
