@@ -4,8 +4,6 @@ import Button from "react-bootstrap/Button";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
-
 
 export default function Signin() {
 
@@ -18,7 +16,7 @@ export default function Signin() {
         e.preventDefault();
     
         console.log(email, password);
-        axios.post("https://tyler-blackjack.vercel.app/signin", {
+        fetch("http://localhost:5000/signin", {
           method: "POST",
           crossDomain: true,
           headers: {
