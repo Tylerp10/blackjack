@@ -176,6 +176,7 @@ body {
   height: 100vh;
 }
 
+
 .form{
   position: relative;
   top: 22%;
@@ -254,18 +255,27 @@ Form {
 }
 
 @media screen and (max-width: 375px) {
-  .register {
-    height: 100%;
-  }
   .form h3{
     margin-top: 0px;
     font-size: 2rem;
   }
 }
 
-@media screen and (max-height: 900px) {
+@media screen and (max-width: 700px) {
+  .register {
+    height: 110vh;
+  }
+}
+
+@media screen and (max-width: 550px) {
   .register {
     height: 120vh;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .register {
+    height: 130vh;
   }
 }
 
@@ -306,3 +316,11 @@ Form {
   font-size: 3rem;
   font-weight: 200;
 }
+
+@media screen and (max-width: 525px) {
+  .signin-form {
+    position: relative;
+    top: 25%;
+  }
+}
+

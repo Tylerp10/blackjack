@@ -35,8 +35,11 @@ export default function Signin() {
             if (data.status === "Success") {
               window.localStorage.setItem("token", data.data);
               window.localStorage.setItem("loggedIn", true);
-    
-            navigate('/game')
+              
+              navigate('/game')
+            }
+            else {
+                alert("Invalid Username or Password")
             }
           });
       }
